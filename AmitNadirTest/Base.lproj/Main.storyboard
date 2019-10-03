@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="clj-vx-XO4">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Countries View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CountriesViewController" customModule="AmitNadirTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gep-H7-Vzs">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ufz-gd-F48"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="nuA-cZ-0gQ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Gep-H7-Vzs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="85J-jz-dO0"/>
+                            <constraint firstItem="Gep-H7-Vzs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EHf-WG-bz6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Gep-H7-Vzs" secondAttribute="bottom" id="Kjs-mr-UyK"/>
+                            <constraint firstItem="Gep-H7-Vzs" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Sl2-Ya-ElT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UIR-UZ-wfr"/>
+                    <connections>
+                        <outlet property="countriesTableView" destination="Gep-H7-Vzs" id="LdC-gv-PdY"/>
+                        <outlet property="navigationBar" destination="UIR-UZ-wfr" id="XGX-dG-t5I"/>
+                        <segue destination="060-dV-5Br" kind="show" identifier="goToBorderedCountriesVC" id="80o-Az-aDZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1091" y="102"/>
+        </scene>
+        <!--Bordered Countries View Controller-->
+        <scene sceneID="FpL-6B-E4Y">
+            <objects>
+                <viewController id="060-dV-5Br" customClass="BorderedCountriesViewController" customModule="AmitNadirTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WkA-4m-O9Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JNj-Zx-wev">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="060-dV-5Br" id="rmn-0X-Xgv"/>
+                                    <outlet property="delegate" destination="060-dV-5Br" id="9nk-65-dZR"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tqZ-RP-IKJ" firstAttribute="bottom" secondItem="JNj-Zx-wev" secondAttribute="bottom" id="2cc-J3-gx8"/>
+                            <constraint firstItem="JNj-Zx-wev" firstAttribute="top" secondItem="tqZ-RP-IKJ" secondAttribute="top" id="6Iy-Mx-mOO"/>
+                            <constraint firstItem="tqZ-RP-IKJ" firstAttribute="trailing" secondItem="JNj-Zx-wev" secondAttribute="trailing" id="Bup-1K-cbc"/>
+                            <constraint firstItem="JNj-Zx-wev" firstAttribute="leading" secondItem="tqZ-RP-IKJ" secondAttribute="leading" id="Z3x-0b-Qmw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tqZ-RP-IKJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Iwr-Yj-PHI"/>
+                    <connections>
+                        <outlet property="borderedCountriesTableview" destination="JNj-Zx-wev" id="NPZ-Fy-0vF"/>
+                        <outlet property="navigationBar" destination="Iwr-Yj-PHI" id="OuU-tB-n5x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j7e-kT-TgH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1845" y="102"/>
+        </scene>
+        <!--Country Pop Up View Controller-->
+        <scene sceneID="cyf-sZ-peO">
+            <objects>
+                <viewController storyboardIdentifier="CountryPopUpViewController" id="w2c-FO-Z7l" customClass="CountryPopUpViewController" customModule="AmitNadirTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fN7-ch-HZ1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8fW-If-BLA" customClass="CountryAlertView" customModule="AmitNadirTest" customModuleProvider="target">
+                                <rect key="frame" x="82" y="248" width="250" height="400"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="a47-wk-h1U"/>
+                                    <constraint firstAttribute="height" constant="400" id="bcp-cA-Gxi"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8fW-If-BLA" firstAttribute="centerY" secondItem="fN7-ch-HZ1" secondAttribute="centerY" id="Cc9-l0-Agw"/>
+                            <constraint firstItem="8fW-If-BLA" firstAttribute="centerX" secondItem="fN7-ch-HZ1" secondAttribute="centerX" id="zfN-lg-GA7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Zl0-Z6-qtp"/>
+                    </view>
+                    <connections>
+                        <outlet property="alertView" destination="8fW-If-BLA" id="VO3-hU-B9x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W1y-YQ-zrH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2603" y="102"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rDv-p9-C9k">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="clj-vx-XO4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="E27-gD-gH6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="H39-aW-QZ1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TKh-rr-em6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="101.78571428571428"/>
+        </scene>
+    </scenes>
+</document>
